@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-3 main-logo">
+                            <a href="">
+                        <img src="https://i2.wp.com/www.cryptotraders.eu/wp-content/uploads/Bytecoin.png?fit=900%2C300&ssl=1">
+                            </a>
+                        </div>
+                        <div class="col-xs-9">
+                            <ul class="main-menu">
+                                <li class="main-menu-item">
+                                    <a href="lapa1.html">Home</a>
+                                </li>
+                                <li class="main-menu-item">
+                                    <a href="lapa2.html">Article</a>
+                                </li>
+                                <li class="main-menu-item">
+                                    <a href="lapa4.html">Chat</a>
+                                </li>
+                                <li class="main-menu-item">
+                                    <a href="lapa5.html">Register</a>
+                                </li>
+                                <li class="main-menu-item">
+                                    <a href="lapa6.html">About us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                     </div>
+    </header>
+    <main>
+            <div class="container-fluid">
+                    <div class="row breadcrumbs">
+                    <div class="col-sm-12">
+                        <br>
+                        <a href="lapa1.html">Home</a>
+                        <span class="seperator">></span>
+                        <span class="current-page">Chat</span>
+                    </div>
+                    </div>
+                    </div>
+
+<h2>Chat</h2>
+
+<div class="row" id="chat">
+                
+        <div class="col-sm-12 ">
+            <div class="chat-main-window">
+                <div class="chat-message" v-for="message in messages">
+                    <h5>{{ message.username }} <em>{{ message.date }}</em></h5>
+                    <p>{{ message.text }}</p>
+                </div><!-- chat-message -->
+                
+                
+            </div><!-- chat-main-window -->
+        </div>
+        <div class="col-sm-12 ">
+            <div class="chat-message-form">
+                <div class="row">
+                    <div class="form-group col-sm-1">
+                        <label for="chat-username-input">Username</label>
+                        <input v-model="newMessageUsername" type="text" class="form-control" id="chat-username-input">
+                    </div>
+                </div>
+                <div class="row">
+                
+                    <div class="form-group col-sm-7">
+                        <label for="chat-text-input">Message</label>
+                        <textarea v-model="newMessageText" class="form-control" id="chat-text-input"></textarea>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <button  class="btn btn-primery" id="chat-send-message-button" v-on:click="sendMessage()" >Send</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>         
+    </main>
+    <footer>
+            <div class="hline-bottom"></div>
+            <h5>&copy;Bytecoin.org 2011–2018 </h5>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#chat',
+            data: {
+                messages: [
+                ],
+                newMessageUsername: "",
+                newMessageText: "",
+            },
+            methods: {
+                sendMessage: function(){
+                    var newStuffToAdd = {
+                        username: this.newMessageUsername, // Peteris
+                        text: this.newMessageText, // some text
+                        date: new Date()
+                    }
+                    
+                    this.messages.push(newStuffToAdd);
+                    this.newMessageText = '';
+                }
+            }
+        })
+    
+    </script>
+</body>
+</html>

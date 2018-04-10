@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-3 main-logo">
+                            <a href="">
+                        <img src="https://i2.wp.com/www.cryptotraders.eu/wp-content/uploads/Bytecoin.png?fit=900%2C300&ssl=1">
+                            </a>
+                        </div>
+                        <div class="col-xs-9">
+                            <ul class="main-menu">
+                                <li class="main-menu-item">
+                                    <a href="lapa1.html">Home</a>
+                                </li>
+                                <li class="main-menu-item">
+                                    <a href="lapa2.html">Article</a>
+                                </li>
+                                <li class="main-menu-item">
+                                    <a href="lapa4.html">Chat</a>
+                                </li>
+                                <li class="main-menu-item">
+                                    <a href="lapa5.html">Register</a>
+                                </li>
+                                <li class="main-menu-item">
+                                    <a href="lapa6.html">About us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                     </div>
+    </header>
+    <main>
+            <div class="container-fluid">
+                    <div class="row breadcrumbs">
+                    <div class="col-sm-12">
+                        <br>
+                        <a href="lapa1.html">Home</a>
+                        <span class="seperator">></span>
+                        <span class="current-page">Register</span>
+                    </div>
+                    </div>
+                    </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-2">
+                <h4>Register</h4>
+                <form id="reg-form">
+                        <div class="errors" style="display:none;">
+                                <ul>
+    
+                                </ul>
+                            </div>
+                <div class="form-group">
+                        <input type="text" name="username" class="form-control" placeholder="Username*">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Password*">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password2" class="form-control" placeholder="Retype password*">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="first_name" class="form-control" placeholder="First name*">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="fast_name" class="form-control" placeholder="Last name">
+                    </div>
+                    <div class="form-group" >
+                            <select placeholder="Please select coutnry" name="country" class="form-control">
+                                <option value="0">Select coutnry</option>
+                                <option value="1">Latvia</option>
+                                <option value="2">Lithuania</option>
+                                <option value="3">Estonia</option>
+                                <option value="4">Murrica</option>
+                                <option value="5">Zimbabve</option>
+                                <option value="6">Narnia</option>
+                            </select>
+                        </div>
+                        <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="agree" value="1"> Agree with some GDPR related stuff
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>  
+            </div>
+    </main>
+    <footer>
+            <h5>&copy;Bytecoin.org 2011–2018 </h5>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $('#reg-form').submit(function(){
+            var errors = [];
+            $('.errors ul').html('');
+            $('.has-error').removeClass('has-error');
+            if ($('input[name="username"]').val() == '') {
+                errors.push('Please enter username');
+                $('input[name="username"]').addClass('has-error');
+            }
+            if ($('input[name="password"]').val() == '') {
+                errors.push('Please enter password');
+                $('input[name="password"]').addClass('has-error');
+            }
+            if ($('input[name="password"]').val().length < 8) {
+                errors.push('Password must be at least 8 symold');
+                $('input[name="password"]').addClass('has-error');
+            }
+            if ($('input[name="password2"]').val() == '') {
+                errors.push('Please retype the password');
+                $('input[name="password2"]').addClass('has-error');
+            }
+            if ($('input[name="password2"]').val() != $('input[name="password"]').val()) {
+                errors.push('Passwords must match');
+                $('input[name="password"]').addClass('has-error');
+                $('input[name="password2"]').addClass('has-error');
+            }
+            if ($('input[name="first_name"]').val() == '') {
+                errors.push('Please enter first name');
+                $('input[name="first_name"]').addClass('has-error');
+            }
+            if ($('select[name="country"]').val() == 0) {
+                errors.push('Please select coutnry');
+                $('select[name="country"]').addClass('has-error');
+            }
+            if ($('input[name="agree"]').is(":checked") == false) {
+                errors.push('Please agree with this amazng stuff');
+                $('input[name="agree"]').addClass('has-error');
+            }
+            if (errors.length > 0) {
+                // handle errors
+                for (var index = 0; index < errors.length; index++) {
+                    var element = errors[index];
+                    $('.errors ul').append('<li>' + element + '</li>');
+                }
+                $('.errors').show();
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+.main-menu {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    float:right;
+}
+.main-menu-item {
+    display: inline-block;
+    height: 50px;
+    margin-left: 10px;
+    line-height: 50px;
+    
+}
+.main-menu-item a {
+    display: block;
+    height: 50px;
+    padding: 0px 15px;
+
+}
+.main-menu-item a:hover {
+    background:#C2F4F4 ;
+}
+header {
+    border-bottom: 1px solid rgb(7, 26, 3);
+    background:#FFB6C1;
+}
+.main-logo img {
+    max-height: 50px;
+}
+.slider img {
+    max-width: 100%;
+}
+.small-article img {
+ position: absolute;
+ right: 0;
+ width: 140px;
+ height: 150px;
+}
+.text {
+    font-size: 12px;
+    text-align: left;
+}
+.BX a {
+    font-size: 15px;
+    font-weight: bold;   
+}
+
+.breadcrumbs {
+    position: relative;
+    
+}
+
+.slider-articles img {
+    max-width:25%;
+    float: left;
+    margin: 10px;  
+}
+
+.articcle-line {
+    padding-bottom: 45px;
+    margin-bottom:0px;
+}   
+
+.pagination {
+    display: inline-block;
+    position: absolute;
+    right: 0px;    
+    width: 200px;
+    height: 0px;
+    bottom: -110px;
+}
+footer{
+    border-top: 1px solid #ccc;
+}
+.medium-article img{
+    max-width: 100%;
+}
+.breadcrumbs{
+    
+    margin-bottom: 20px;
+}
+.breadcrumbs .seperator{
+    margin: 0px 10px;
+}
+.sliderss img {
+    max-width:80%;
+}
+.bildes img {
+    width: 150px;
+height: 140px;
+position: relative;
+top:20px;
+left: 0px;
+}
+.bildes2 img {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    position: relative;
+    top: -430px;
+    left: -25px;
+     }
+.teksts  {
+text-align:justify; 
+right:100px;
+position: relative;
+}
+.teksts2  {
+text-align:justify;  
+
+right:100px;
+position: relative;
+}
+.breadcrumbs {
+position: relative;
+}
+.teksts3  {
+text-align:justify;  
+margin-left:320px; 
+}
+h3 {
+    margin-left: 200px;
+}
+.poga  {
+    margin-left: 1050px;
+    top : -35px;
+    position: relative;
+}
+.valstis {
+    width: 180px;
+    height: 25px;
+}
+.kaste {
+    width:20px;
+    height:20px;
+    }
+#label {
+top:-26px;
+position: relative;
+right: -30px;
+    }
+.teksts5 p {
+        text-align:justify;
+        position: relative;
+        right: 200px; 
+    }
+
+
