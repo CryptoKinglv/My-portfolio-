@@ -1,0 +1,52 @@
+h5 {
+    font-family:"Aguafina Script" ;  
+    font-size:35px;
+    margin:35px;
+  }
+  header {
+  
+    margin:25px
+  }
+  .ramis {
+    border:2px groove;
+    padding: 1px;
+    text-align: left;
+    font-family: 'Covered By Your Grace';
+    font-size: 22px;
+    background-color: #0abde3;
+    
+  }
+  .main-text {
+      text-align: left;
+      
+      padding: 30px;
+      font-family: 'Esteban';font-size: 15px;
+  }
+  
+ .sarakts {
+    column-count: 3;
+    column-gap: 20px;
+    list-style-position: inside;
+ }
+ .citati {
+    font-family: bold;
+    font-size: 15px;
+    
+    
+}
+.box {
+    position: relative;
+    left:29%;
+    padding: 25px;
+    width: 40%;
+    height: 130px;
+    border: 3px solid gainsboro	;
+    background-color:gainsboro	;
+}
+.tapete {
+    background-color:silver;
+}
+body {
+margin: 60px;
+
+}
